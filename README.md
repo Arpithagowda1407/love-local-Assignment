@@ -9,3 +9,15 @@ After the inner loop, the last element 1 is appended to the row.
 The completed row is then appended to the triangle, representing a new row in Pascal's Triangle.
 Steps 4-7 are repeated for each row until the desired number of rows (numRows) is reached.
 The final triangle is returned, representing Pascal's Triangle with the specified number of rows.
+**#Medium 2**
+This code is an implementation of the Boyer-Moore Majority Vote algorithm to find the majority elements in an array. The algorithm is designed to find elements that appear more than n/3 times in an array, where n is the length of the array.
+Initialize two candidate elements (candidate1 and candidate2) and their corresponding counts (count1 and count2) to None and 0.
+Iterate through the array (nums) and update counts for the candidates.
+If the current number matches either candidate, increment the corresponding count.
+If the counts are zero, update the candidate and set the count to 1.
+If counts are not zero, decrement both counts.
+Reset counts for the second phase.
+Iterate through the array again and count the occurrences of the potential candidates.
+Check if the counts of candidates meet the criteria for majority elements (more than n/3 occurrences).
+If so, append the candidates to the result list.
+Return the list of majority elements.
