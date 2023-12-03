@@ -21,3 +21,14 @@ Iterate through the array again and count the occurrences of the potential candi
 Check if the counts of candidates meet the criteria for majority elements (more than n/3 occurrences).
 If so, append the candidates to the result list.
 Return the list of majority elements.
+**Hard 2**
+ The algorithm uses the KMP (Knuth-Morris-Pratt) pattern matching algorithm to find the longest palindrome that is also a prefix of the given string.
+ Create a modified string by concatenating the original string (s) with its reverse and adding a special character ("#") in the middle.
+Initialize a KMP table (kmp_table) with zeros.
+Initialize an index j to track the current position in the pattern.
+Use the KMP algorithm to build the KMP table.
+Iterate through the modified string, updating the table based on pattern matches.
+Get the length of the matching prefix (the longest palindrome that is also a prefix) from the last value of the KMP table.
+Extract the suffix of the original string (s) starting from the length of the matching prefix.
+Reverse the extracted suffix and concatenate it with the original string to form the shortest palindrome.
+Return the shortest palindrome.
